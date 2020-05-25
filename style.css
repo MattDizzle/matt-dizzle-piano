@@ -1,0 +1,50 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #00AAFF, purple);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Tangerine', serif;
+  font-size: 24px;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+.piano {
+  display: flex;
+
+}
+
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+}
+
+.white {
+ --width: 100px;
+  background-color: whitesmoke;
+  border: 1px solid gray;
+}
+
+.white.active {
+  background: linear-gradient(to right, #00AAFF, purple);
+}
+
+.black {
+  --width: 60px;
+  background-color: black;
+  border: 1px solid gray;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.black.active {
+ background: linear-gradient(to right, #00AAFF, purple);
+}
+
+
